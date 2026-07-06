@@ -20,7 +20,7 @@ body {
     "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     Meiryo, sans-serif;
   text-align: center;
-  background-image: url(../img/♡.jpg); /*★自分で画像を設定すること。*/
+  background-image: url(../img/ace.jpg); /*★自分で画像を設定すること。*/
   background-size: cover;
 }
 
@@ -112,8 +112,7 @@ a {
 /*a:hover {
   opacity: 0.5;
   filter: grayscale(100%);
-}
-*/
+}*/
 .catchCopy {
   animation: catchCopy 1s 1.5s;
 }
@@ -135,6 +134,7 @@ a {
   margin: 0;
   line-height: 1em;
   overflow: hidden;
+  opacity: 0;
 }
 
 .item02 {
@@ -144,8 +144,21 @@ a {
   margin: 0;
   line-height: 1em;
   overflow: hidden;
+  opacity: 0;
 }
-
+.fade-in {
+  animation: fade-in 1.5s ease-out forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .item01 img,
 .item02 img {
   width: 6em;
@@ -164,8 +177,8 @@ a {
     box-shadow 0.3s ease;
   cursor: pointer;
 }
-.item01:hover,
-.item02:hover {
+.item01 img:hover,
+.item02 img:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
