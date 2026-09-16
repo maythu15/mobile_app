@@ -117,8 +117,8 @@ header {
 }
 #btn1:hover {
   background: linear-gradient(
-    rgba(255, 0, 0, 0.7) 0%,
-    rgba(0, 0, 255, 0.7) 100%
+    rgba(0, 195, 255, 0.7) 0%,
+    rgba(70, 116, 245, 0.7) 100%
   );
   color: white;
 }

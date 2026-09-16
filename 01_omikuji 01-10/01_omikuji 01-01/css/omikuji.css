@@ -17,7 +17,7 @@ body {
   font-family:
     "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     Meiryo, sans-serif;
-  background: url(..//img/acee32c9627766d4b1eb67834056968a_t.jpeg);
+  background: url(..//img/luffy.jpg);
   background-size: cover;
   user-select: none;
   overflow: hidden;
@@ -111,25 +111,25 @@ p {
   border-radius: 0.3em;
   color: whitesmoke;
   font-size: 1.5em;
-  background: rgba(253, 4, 79);
+  background: rgba(255, 0, 174, 0.7) 0%;
   cursor: pointer;
 }
 #btn99:hover {
   background: linear-gradient(
-    rgba(255, 0, 0, 0.7) 0%,
-    rgba( 0, 0, 255, 0.7) 100%
+    rgba(255, 0, 174, 0.7) 0%,
+    rgba(70, 116, 245, 0.7) 100%
   );
 }
 
 /*******************************************************/
 /* ヘッダー                                             */
 /*******************************************************/
-header{
+header {
   margin-top: 20px;
   color: rgba(3, 125, 255, 0.945);
   font-size: 38px;
   font-weight: bold;
-  text-shadow: 5px 5px 5px rgba(255,255, 255, 0.65);
+  text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.65);
   text-align: center;
 }
 /*******************************************************/
@@ -143,8 +143,7 @@ header{
   background-image: url(../img/omikuji.png);
   background-size: contain;
   background-repeat: no-repeat;
-  cursor: url(../img/zoro.png),auto;
-  
+  cursor: url(../img/zoro.png), auto;
 }
 #btn1:hover {
   animation: shaking 0.3s infinite;
@@ -188,7 +187,7 @@ footer > p {
   color: whitesmoke;
   font: 16px Rajdhani;
   text-align: center;
-  background: rgba(1, 24,31, 0.7);
+  background: rgba(1, 24, 31, 0.7);
 }
 @media screen and (max-width: 400px) {
   body {
