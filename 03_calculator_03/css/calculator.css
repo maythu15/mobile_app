@@ -21,7 +21,7 @@ body {
   font-family:
     "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     Meiryo, sans-serif;
-  background: url(../img/Momonga\ ipad\ wallpaper.jpg);
+  background: url(../img/chiikawa.jpg);
   background-size: cover;
   user-select: none;
   overflow: hidden;
@@ -37,12 +37,12 @@ body {
   border-radius: 0.3em;
   color: whitesmoke;
   font-size: 1.5em;
-  background: rgba(255, 0, 174, 0.7) 0%;
+  background: rgba(255, 139, 218, 0.7) 0%;
   cursor: pointer;
 }
 #btn99:hover {
   background: linear-gradient(
-    rgba(255, 0, 174, 0.7) 0%,
+    rgba(255, 139, 218, 0.7) 0%,
     rgba(70, 116, 245, 0.7) 100%
   );
 }

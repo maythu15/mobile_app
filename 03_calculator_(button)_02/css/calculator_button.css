@@ -16,7 +16,7 @@ body {
   padding: 0;
   line-height: normal; /*ブラウザが自動的に行間を決める*/
   /*background-color: rgb(75, 168, 255);*/
-  background: url(../img/Cinnamorrol_2.jpg);
+  background: url(../img/bluecat.jpg);
   background-size: cover;
   user-select: none;
   overflow: hidden;
@@ -43,13 +43,13 @@ body {
   border-radius: 0.3em;
   color: whitesmoke;
   font-size: 1.5em;
-  background: rgba(255, 0, 174, 0.7) 0%;
+  background: rgba(255, 139, 218, 0.7) 0%;
   cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
 }
 /* 01-04 add 疑似クラス*/
 #btn99:hover {
   background: linear-gradient(
-    rgba(255, 0, 174, 0.7) 0%,
+    rgba(255, 139, 218, 0.7) 0%,
     rgba(70, 116, 245, 0.7) 100%
   );
 }
