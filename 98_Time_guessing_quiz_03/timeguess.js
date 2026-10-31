@@ -16,6 +16,12 @@ let startTime; // Startボタンクリック時の時刻
 let timeoutid; // ID
 let stopTime = 0; // Stopまでの経過時間
 
+// 目標秒数の設定（プロンプト入力）
+let set_sec = prompt("何秒あてにしますか？", "10");
+let msg = document.querySelector(".message-container");
+if (set_sec && msg) {
+  msg.innerHTML = `<i class="fa fa-heart faa-tada animated" aria-hidden="true"></i> ちょうど${set_sec}秒でストップしてね！ <i class="fa fa-heart faa-tada animated" aria-hidden="true"></i>`;
+}
 // ボタンを"初期"状態とする
 setButtonStateInitial();
 
@@ -45,7 +51,7 @@ btn_stop.addEventListener(
 
     clearTimeout(timeoutid); //setTimeout()でセットしたタイマーを解除する際に使用
     stopTime = Date.now() - startTime;
-    if (stopTime >= 10000 && stopTime <= 11000) {
+    if (stopTime >= set_sec * 1000 && stopTime < (Number(set_sec) + 1) * 1000) {
       soundControl(stop2_sound);
       document.body.style.backgroundImage = "url('./img/fireworks.gif')";
       document.body.style.backgroundSize = "cover";
@@ -62,16 +68,27 @@ btn_stop.addEventListener(
 ////////////////////////
 // Resetボタンクリック
 ////////////////////////
-btn_reset.addEventListener("click", function () {
-  // ボタンを"初期"状態とする
-  setButtonStateInitial();
-  soundControl(reset_sound);
-  document.body.style.backgroundImage = "";
-  document.body.style.backgroundColor = "";
-  timer.textContent = "00:00.000";
-  stopTime = 0;
-});
+btn_reset.addEventListener(
+  "click",
+  function () {
+    // ボタンを"初期"状態とする
+    setButtonStateInitial();
+    soundControl(reset_sound);
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundColor = "";
+    timer.textContent = "00:00.000";
+    stopTime = 0;
 
+    // リセット時に再度秒数を設定
+    setTimeout(function () {
+      set_sec = prompt("何秒あてにしますか？", "10");
+      if (set_sec && msg) {
+        msg.innerHTML = `<i class="fa fa-heart faa-tada animated" aria-hidden="true"></i> ちょうど${set_sec}秒でストップしてね！ <i class="fa fa-heart faa-tada animated" aria-hidden="true"></i>`;
+      }
+    }, 300); // 500 の数字を変更することで待つ時間を調整できます
+  },
+  false,
+);
 function countUp() {
   const d = new Date(Date.now() - startTime + stopTime);
   /* padStart()で２桁固定表示とする */
@@ -81,8 +98,7 @@ function countUp() {
   /* 描画 */
   timer.textContent = `${m}:${s}.${ms}`;
 
-  timeoutid = setTimeout(() => {
-    //再帰呼び出し
+  timeoutid = setTimeout(function () {
     countUp();
   }, 10);
 }
@@ -125,4 +141,4 @@ function soundControl(w_sound) {
   }
   w_sound.play();
   currentAudio = w_sound;
-} /**/
+}

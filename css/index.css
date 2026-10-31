@@ -20,7 +20,7 @@ body {
     "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     Meiryo, sans-serif;
   text-align: center;
-  background-image: url(../img/screen.jpg); /*★自分で画像を設定すること。*/
+  background-image: url(../img/mikko\ cat.jpg); /*★自分で画像を設定すること。*/
   background-size: cover;
 }
 
@@ -62,7 +62,7 @@ h1 {
     #30c7ec 47%,
     #46aef7 100%
   ); */
-  background: linear-gradient(135deg, #6bb5ff, #3a87b0, #6fadff);
+  background: linear-gradient(135deg, #e498ca, #fb93e5, #eb7ec1);
 }
 
 h2 {
