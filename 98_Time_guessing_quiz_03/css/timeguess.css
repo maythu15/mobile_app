@@ -139,24 +139,23 @@ i {
 /* ボタンエリア                          */
 /****************************************/
 .btn-container {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
+  margin: 0px 100px 5px;
+  font-size: 1em;
+  font-weight: bold;
 }
 .btn-area {
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-around;
 }
 /*.btn {
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 24px;
-  color: whitesmoke;
-  background: rgb(158, 153, 153);
-  border: solid 2px #333;
-  user-select: none;
-  cursor: pointer; }/*カーソルをポインターの形（かたち）にする*/
+padding: 10px;
+border-radius: 10px;
+font-size: 24px;
+color: whitesmoke;
+background: rgb(158, 153, 153);
+border: solid 2px #333;
+user-select: none;
+cursor: pointer; }/*カーソルをポインターの形（かたち）にする*/
 .js-inactive {
   opacity: 0.6;
 }
